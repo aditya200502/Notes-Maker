@@ -4,8 +4,13 @@ const Adddata = ({updatenote}) =>{
 
     const [Text,setText] = useState('');
 
+    const limit = 2000;
     const update = (event) =>{
-        setText(event.target.value);
+        if(limit - event.target.value.length >=0)
+        {
+            setText(event.target.value);
+        }
+            
     };
      
     const saveclick = () =>{
@@ -25,7 +30,7 @@ const Adddata = ({updatenote}) =>{
             onChange={update}
         ></textarea>
         <div className="note-footer">
-            <small>2000 Words Remaining</small>
+            <small>{limit - Text.length} Words Remaining</small>
             <button className="save" onClick={saveclick}>Save</button>
         </div>
     </div>
