@@ -1,6 +1,13 @@
+import React from "react";
+import List from "./components/List";
+
 function App() {
   return (
-    <div></div>
+    <div className="container">
+      <List />
+      <List />
+      <List />
+    </div>
   );
 }
 
