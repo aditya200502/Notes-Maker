@@ -20,9 +20,20 @@ function App() {
       date: "23/12/2022",
     },
   ]);
+  const addnote = (text) => {
+    const date = new Date();
+    const newNote = {
+      id:nanoid(),
+      text: text,
+      date: date.toLocaleDateString()
+    }
+    const newNotes = [...Data,newNote];
+    setData(newNotes);
+    // console.log(text);
+  }
   return (
     <div className="container">
-      <List notes={Data}/>
+      <List notes={Data} updatenote={addnote}/>
     </div>
   );
 }
