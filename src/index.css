@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .container{
   max-width: 840px;
   margin-right: auto;
@@ -63,4 +69,35 @@ textarea:focus{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.delete-icon{
+  cursor: pointer;
+}
+
+/* Search bar */
+.search{
+  display: flex;
+  align-items: center;
+  background-color: bisque;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input {
+  border: none;
+  background-color: bisque;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.dark-mode{
+  background-color: black;
+}
+
+.dark-mode h1{
+  color: white;
 }
